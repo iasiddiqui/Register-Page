@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
-import './register.css';
+import React, { useState } from "react";
+import "./register.css";
 
 const titles = [
-  { value: '', label: 'Select Title' },
-  { value: 'Mr.', label: 'Mr.' },
-  { value: 'Ms.', label: 'Ms.' },
-  { value: 'Dr.', label: 'Dr.' },
-  { value: 'Prof.', label: 'Prof.' },
+  { value: "", label: "Select Title" },
+  { value: "Dr.", label: "Dr." },
+  { value: "Mr.", label: "Mr." },
+  { value: "Ms.", label: "Ms." },
+  { value: "Mrs.", label: "Mrs." },
 ];
 
 const countries = [
-  { value: '', label: 'Select Country' },
-  { value: 'India', label: 'India' },
-  { value: 'United States', label: 'United States' },
-  { value: 'United Kingdom', label: 'United Kingdom' },
-  { value: 'Australia', label: 'Australia' },
-  { value: 'Canada', label: 'Canada' },
+  { value: "", label: "Select Country" },
+  { value: "India", label: "India" },
+  { value: "United States", label: "United States" },
+  { value: "United Kingdom", label: "United Kingdom" },
+  { value: "Australia", label: "Australia" },
+  { value: "Canada", label: "Canada" },
 ];
 
 const initialState = {
-  title: '',
-  name: '',
-  email: '',
-  alternativeEmail: '',
-  phone: '',
-  whatsappNumber: '',
-  institution: '',
-  country: '',
+  title: "",
+  name: "",
+  email: "",
+  alternativeEmail: "",
+  phone: "",
+  whatsappNumber: "",
+  institution: "",
+  country: "",
 };
 
 const Register = () => {
@@ -39,11 +39,11 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
+    console.log("Form Data:", formData);
   };
 
   return (
-    <div>
+    <div className="register">
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="title">Title*:</label>
@@ -141,7 +141,6 @@ const Register = () => {
             ))}
           </select>
         </div>
-        <button type="submit">Register</button>
       </form>
     </div>
   );
